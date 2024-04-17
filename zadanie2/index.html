@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="sk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:wght@300;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Užite si svoj športový deň s nami</h1>
+        <form
+            action="https://form2mail.hynix.sk/form2mail.php"
+            method="post"
+            enctype="multipart/form-data"
+        >
+            <input
+                type="hidden"
+                name="apikey"
+                value="451a1466cd89e5ad06026537eedc32c6"
+            />
+
+            <input type="hidden" name="from" value="xbaranovic@stuba.sk" />
+            <input type="hidden" name="sender" value="BaranovicJan" />
+            <input type="hidden" name="to" value=" feistu01@gmail.com" />
+            <input type="hidden" name="subject" value="zadanie2" />
+            <input
+                type="hidden"
+                name="redirectOk"
+                value="https://webte1.fei.stuba.sk/~xbaranovic/zadanie1/"
+            />
+            <input
+                type="hidden"
+                name="redirectFalse"
+                value="https://www.fei.stuba.sk/"
+            />
+
+            <div class="form-container">
+                <section class="left">
+                    <div class="form-element">
+                        <label for="name">Meno*</label>
+                        <input type="text" name="name" id="name" />
+                        <small></small>
+                    </div>
+
+                    <div class="form-element">
+                        <label for="surname">Priezvisko*</label>
+                        <input type="text" name="surname" id="surname" />
+                        <small></small>
+                    </div>
+
+                    <div class="form-element">
+                        <label for="birth-date">Dátum narodenia*</label>
+                        <input type="date" name="birth-date" id="birth-date" />
+                        <small></small>
+                    </div>
+
+                    <div class="form-element">
+                        <label for="age">Vek*</label>
+                        <input type="number" name="age" id="age" />
+                        <small></small>
+                    </div>
+
+                    <div class="form-element">
+                        <label for="country-code">Tel. číslo</label>
+                        <div id="two-in-row">
+                            <select name="country-code" id="country-code">
+                                <option value="+421">(SK)+421</option>
+                                <option value="+420">(CZ)+420</option>
+                                <option value="+48">(PL)+48</option>
+                            </select>
+                            <input
+                                type="tel"
+                                name="phone-number"
+                                id="phone-number"
+                                placeholder="948420908"
+                            />
+                            <small></small>
+                        </div>
+                    </div>
+
+                    <p>Vyberte pohlavie</p>
+                    <div class="form-element flex">
+                        <div>
+                            <input
+                                type="radio"
+                                name="sex"
+                                value="man"
+                                id="man"
+                            />
+                            <label for="man">Muž</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                name="sex"
+                                value="woman"
+                                id="woman"
+                            />
+                            <label for="woman">Žena</label>
+                        </div>
+                    </div>
+                    <small id="radio-error"></small>
+
+                    <div class="form-element">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="meno@gmail.go.sk"
+                        />
+                        <small></small>
+                    </div>
+                </section>
+
+                <section class="right">
+                    <div class="form-element">
+                        <label for="activities">Vyberte aktivitu</label>
+                        <select name="activities" id="activities">
+                            <option value="Plavanie">Plávanie</option>
+                            <option value="Lezenie">Lezenie</option>
+                            <option value="Posilovanie">Posilovanie</option>
+                        </select>
+                    </div>
+
+                    <div class="form-element">
+                        <label for="facilities"
+                            >Vyberte zariadenie (cena za 1 hodinu)</label
+                        >
+                        <select name="facilities" id="facilities"></select>
+                    </div>
+
+                    <div class="form-element">
+                        <label for="time">Vyberte čas</label>
+                        <select name="time" id="time"></select>
+                    </div>
+
+                    <p class="description">Koľko ľudí sa zúčastní akcie?</p>
+                    <div class="form-element flex">
+                        <div>
+                            <input
+                                type="radio"
+                                name="number-of-people"
+                                value="1"
+                                id="individual"
+                                checked
+                            />
+                            <label for="individual">Jednotlivec</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                name="number-of-people"
+                                value="5"
+                                id="group"
+                            />
+                            <label for="group">Skupina</label>
+                        </div>
+                    </div>
+
+                    <div class="form-element hidden">
+                        <label for="people-count"
+                            >Prosím uveďte presný počet.</label
+                        >
+                        <input
+                            type="number"
+                            id="people-count"
+                            name="people-count"
+                        />
+                        <small></small>
+                    </div>
+
+                    <div class="form-element">
+                        <p class="description">
+                            Potrebujete si od nás požičať nejaké vybavenie?
+                        </p>
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="climbing-shoes"
+                                name="climbing-shoes-price"
+                                value="4"
+                            />
+                            <label for="climbing-shoes">Lezečky - 4€</label>
+                        </div>
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="climbing-harness"
+                                name="climbing-harness-price"
+                                value="2"
+                            />
+                            <label for="climbing-harness"
+                                >Lezecký sedák - 2€</label
+                            >
+                        </div>
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="belaying-device"
+                                name="belaying-device-price"
+                                value="1"
+                            />
+                            <label for="belaying-device"
+                                >Istiaca pomôcka - 1€</label
+                            >
+                        </div>
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="towel"
+                                name="towel-price"
+                                value="1"
+                            />
+                            <label for="towel">Uterák - 1€</label>
+                        </div>
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="other-option"
+                                name="other-option"
+                                value="5"
+                            />
+                            <label for="other-option">Iné - 5€</label>
+                        </div>
+
+                        <div class="form-element hidden">
+                            <label for="hidden-option" id="hidden-label">
+                                Prosím napíšte nám čo potrebujete
+                            </label>
+                            <input
+                                type="text"
+                                name="message"
+                                id="hidden-option"
+                            />
+                            <small></small>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="form-element">
+                <input
+                    type="hidden"
+                    id="hidden-name"
+                    name="hidden-name"
+                    value="Ján Baranovič"
+                />
+            </div>
+            <label for="note"
+                >Máte nejaké špeciálne požiadavky? Dajte nám o nich
+                vedieť</label
+            >
+            <textarea name="note" id="note" cols="30" rows="4"></textarea>
+            <span id="note-char-count">240/240</span>
+            <h5 class="mega-fatal-error hidden">
+                Formulár nie je správne vyplnený, prosím skontrolujte všetky
+                polia
+            </h5>
+            <input type="submit" class="btn" />
+        </form>
+        <div class="overlay hidden"></div>
+        <script src="js/script.js"></script>
+    </body>
+</html>

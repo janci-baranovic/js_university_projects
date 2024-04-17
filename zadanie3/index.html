@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Grafy</title>
+    </head>
+    <body>
+        <nav
+            class="navbar is-dark"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="index.html" class="navbar-item">
+                        <h2
+                            class="subtitle has-text-weight-semibold has-text-white"
+                        >
+                            Zadanie 3
+                        </h2>
+                    </a>
+                    <a
+                        class="navbar-burger"
+                        role="button"
+                        data-target="nav-menu"
+                        aria-label="menu"
+                        aria-expanded="false"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div class="navbar-menu" id="nav-menu">
+                    <div class="navbar-start"></div>
+                    <div class="navbar-end has-text-centered">
+                        <a href="index.html" class="navbar-item">
+                            Webte1 štatistiky
+                        </a>
+                        <a href="web/live-chart.html" class="navbar-item">
+                            Funkcie
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="section">
+            <div class="columns">
+                <div class="column">
+                    <div id="bar-chart"></div>
+                </div>
+                <div class="column">
+                    <div id="line-chart"></div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h1 class="title has-text-centered mb-6">
+                Rozdelenie po jednotlivých rokoch
+            </h1>
+            <div class="columns">
+                <div class="column">
+                    <div id="pie-chart1"></div>
+                </div>
+                <div class="column">
+                    <div id="pie-chart2"></div>
+                </div>
+                <div class="column">
+                    <div id="pie-chart3"></div>
+                </div>
+            </div>
+            <div class="columns mt-6">
+                <div class="column">
+                    <div id="pie-chart4"></div>
+                </div>
+                <div class="column">
+                    <div id="pie-chart5"></div>
+                </div>
+                <div class="column">
+                    <div id="pie-chart6"></div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="js/charts.js"></script>
+    </body>
+</html>

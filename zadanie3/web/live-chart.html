@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+        <title>Chart</title>
+    </head>
+    <body>
+        <nav
+            class="navbar is-dark"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="../index.html" class="navbar-item">
+                        <h2
+                            class="subtitle has-text-weight-semibold has-text-white"
+                        >
+                            Zadanie 3
+                        </h2>
+                    </a>
+                    <a
+                        class="navbar-burger"
+                        role="button"
+                        data-target="nav-menu"
+                        aria-label="menu"
+                        aria-expanded="false"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div class="navbar-menu" id="nav-menu">
+                    <div class="navbar-start"></div>
+                    <div class="navbar-end has-text-centered">
+                        <a href="../index.html" class="navbar-item">
+                            Webte1 štatistiky
+                        </a>
+                        <a href="live-chart.html" class="navbar-item">
+                            Funkcie
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="section">
+            <div class="container">
+                <div id="live-chart"></div>
+            </div>
+            <div class="container">
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <button class="button is-info">Koniec</button>
+                    </div>
+                    <div class="column has-text-centered">
+                        <my-slider min="1" max="10" class="hidden"></my-slider>
+                        <!-- <my-text-field min="0" max="10"></my-text-field> -->
+                        <input
+                            type="number"
+                            min="1"
+                            max="10"
+                            value="1"
+                            id="number-input"
+                        />
+
+                        <div class="control">
+                            <input type="radio" id="slider" name="visibility" />
+                            <label for="slider" class="radio">Slider</label>
+
+                            <input
+                                type="radio"
+                                id="input-field"
+                                name="visibility"
+                                checked
+                            />
+                            <label for="input-field" class="radio"
+                                >Input field</label
+                            >
+                        </div>
+                    </div>
+                    <div class="column has-text-centered">
+                        <label class="checkbox">
+                            <input type="checkbox" name="sin" checked />
+                            Sin
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="cos" checked />
+                            Cos
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="columns">
+                <div class="column is-three-quarters">
+                    <div id="live-chart"></div>
+                </div>
+                <div
+                    class="column is-flex is-flex-direction-column is-justify-content-space-between"
+                >
+                    <div>
+                        <my-slider
+                            min="0"
+                            max="10"
+                            value="1"
+                            class="hidden"
+                        ></my-slider>
+                        <my-text-field
+                            min="0"
+                            max="10"
+                            value="1"
+                        ></my-text-field>
+                        <div class="control">
+                            <input type="radio" id="slider" name="visibility" />
+                            <label for="slider" class="radio">Slider</label>
+
+                            <input
+                                type="radio"
+                                id="input-field"
+                                name="visibility"
+                                checked
+                            />
+                            <label for="input-field" class="radio"
+                                >Input field</label
+                            >
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <label class="checkbox">
+                            <input type="checkbox" name="sin" checked />
+                            Sin
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="cos" checked />
+                            Cos
+                        </label>
+                    </div>
+                    <button class="button is-info">Koniec</button>
+                </div>
+            </div> -->
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="../js/webComponent.js"></script>
+    </body>
+</html>

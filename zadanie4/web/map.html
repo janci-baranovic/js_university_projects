@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+            integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+            crossorigin=""
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <nav
+            class="navbar is-dark"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="index.html" class="navbar-item">
+                        <h2
+                            class="subtitle has-text-weight-semibold has-text-white"
+                        >
+                            Zadanie 4
+                        </h2>
+                    </a>
+                    <a
+                        class="navbar-burger"
+                        role="button"
+                        data-target="nav-menu"
+                        aria-label="menu"
+                        aria-expanded="false"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div class="navbar-menu" id="nav-menu">
+                    <div class="navbar-start"></div>
+                    <div class="navbar-end has-text-centered">
+                        <a href="../index.html" class="navbar-item">
+                            Galéria
+                        </a>
+                        <a href="map.html" class="navbar-item"> Mapa </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="section">
+            <div class="container has-text-centered">
+                <button class="button is-outlined is-dark mb-4" id="route">
+                    Trasa
+                </button>
+                <p id="route-length" class="mb-2"></p>
+                <div id="bigMap"></div>
+            </div>
+        </div>
+        <script
+            src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+            crossorigin=""
+        ></script>
+        <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+        <script src="../js/maps.js"></script>
+    </body>
+</html>
